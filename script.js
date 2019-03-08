@@ -1,9 +1,6 @@
 var app = new Vue({
-  // element property which points to the DOM
   el: '#app',
   data: {
-    //the data we'll use in
-    //building our app goes in here
     current: '',
     x: '',
     y: '',
@@ -12,8 +9,6 @@ var app = new Vue({
 
   },
   methods: {
-    // the functions we'll use in
-    // controlling our app go in here
     setNumber(digit) {
       if (this.operator === null) {
         this.x += digit;
@@ -24,8 +19,6 @@ var app = new Vue({
       }
     },
     press: function(event) {
-      //we make a reference to the inner text
-      // of each button to dispatch our functions
       let key = event.target.innerText;
       if (key != "=" &&
         key != "C" &&
@@ -97,7 +90,7 @@ var app = new Vue({
   }
 });
 
-// our '=' button
+// '=' button
 function equals() {
   if ((app.current).indexOf("^") > -1) {
     var base = (app.current).slice(0, (app.current).indexOf("^"));
@@ -109,37 +102,37 @@ function equals() {
   }
 }
 
-  // our 'C' button
+  //  'C' button
   function clear() {
     app.current = "";
   }
 
-  // our '<=' button
+  //  'back' button
   function backspace() {
     app.current = app.current.substring(0, app.current.length - 1);
   }
 
-  // our '*' button
+  //  '*' button
   function multiply() {
     app.current += "*";
   }
 
-  // our '/' button
+  //  '/' button
   function divide() {
     app.current += "/";
   }
 
-  // our '+' button
+  //  '+' button
   function plus() {
     app.current += "+";
   }
 
-  // our '-' button
+  //  '-' button
   function minus() {
     app.current += "-";
   }
 
-  // our '±' button
+  //  '+/-' button
   function plusMinus() {
     if (app.current.charAt(0) === "-") {
       app.current = app.current.slice(1);
@@ -148,7 +141,7 @@ function equals() {
     }
   }
 
-  // our 'x!' button
+  //  'x!' button
   function factorial() {
     var number = 1;
     if (app.current === 0) {
@@ -164,67 +157,67 @@ function equals() {
     }
   }
 
-  // our 'π' button
+  //  'pi' button
   function pi() {
     app.current = (app.current += Math.PI);
   }
 
-  // our 'x ²' button
+  //  'x^2' button
   function square() {
     app.current = (app.current * app.current);
   }
 
-  // our '√' button
+  //  'sqrt' button
   function squareRoot() {
     app.current = Math.sqrt(app.current);
   }
 
-  // our '%' button
+  //  '%' button
   function percent() {
     app.current = app.current / 100;
   }
 
-  // our 'sin' button
+  //  'sin' button
   function sin() {
     app.current = Math.sin(app.current);
   }
 
-  // our 'cos' button
+  //  'cos' button
   function cos() {
     app.current = Math.cos(app.current);
   }
 
-  // our 'tan' button
+  //  'tan' button
   function tan() {
     app.current = Math.tan(app.current);
   }
 
-  // our 'log' button
+  //  'log' button
   function log() {
     app.current = Math.log10(app.current);
   }
 
-  // our 'ln' button
+  //  'ln' button
   function ln() {
     app.current = Math.log(app.current);
   }
 
-  // our 'X^' button
+  //  'X^' button
   function exponent() {
     app.current += "^";
   }
 
-  // our 'exp' button
+  //  'exp' button
   function exp() {
     app.current = Math.exp(app.current);
   }
 
-  // our 'rad' button
+  //  'rad' button
   function radians() {
     app.current = app.current * (Math.PI / 180);
   }
 
-  // our '∘' button
+  //  'deg' button
   function degrees() {
     app.current = app.current * (180 / Math.PI);
   }

@@ -1,7 +1,8 @@
 body {
-  background: #085078;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #85D8CE, #085078);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #85D8CE, #085078); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #085078;
+  background: -webkit-linear-gradient(to right, #85D8CE, #085078);
+  background: linear-gradient(to right, #85D8CE, #085078);
+  padding-bottom: var(--footer-height);
 }
 
 h1 {
@@ -81,4 +82,19 @@ h1 {
 
 button::-moz-focus-inner {
   border-color: transparent;
+}
+
+:root{
+  --footer-height:60px;
+}
+
+footer {
+  height: var(--footer-height);
+  color: #262DB2;
+  position: fixed;
+  bottom: 0;
+}
+
+p {
+  color: black;
 }

@@ -10,84 +10,90 @@
 <body>
   <h1>Scientific Calculator</h1>
   <div id="alignment" align="center">
-        <div class="calculator">
-            <div id="app">
-                <button class="toggle-button" v-on:click="changeMode = !changeMode">
-                  <p v-show="changeMode">Show Advanced Mode &nbsp; &nbsp; &#9864;</p>
-                  <p v-show="!changeMode">Show Basic Mode &nbsp; &nbsp; &#9862;</p>
+    <div class="calculator">
+      <div id="app">
+        <button class="toggle-button" v-on:click="changeMode = !changeMode">
+          <p v-show="changeMode">Show Advanced Mode &nbsp; &nbsp; &#9864;</p>
+          <p v-show="!changeMode">Show Basic Mode &nbsp; &nbsp; &#9862;</p>
 
-                </button>
-                <div class="results">
-                  <input class="input" v-model="current">
-                </div>
-                <div class="basic-mode" v-show="changeMode" >
-                    <button class="button" v-on:click="press">7</button>
-                    <button class="button" v-on:click="press">8</button>
-                    <button class="button" v-on:click="press">9</button>
-                    <button class="button" v-on:click="press">*</button>
-                    <button class="button" v-on:click="press">back</button>
-                    <button class="button" v-on:click="press">C</button>
-                    <button class="button" v-on:click="press">4</button>
-                    <button class="button" v-on:click="press">5</button>
-                    <button class="button" v-on:click="press">6</button>
-                    <button class="button" v-on:click="press">/</button>
-                    <button class="button" v-on:click="press">(</button>
-                    <button class="button" v-on:click="press">)</button>
-                    <button class="button" v-on:click="press">1</button>
-                    <button class="button" v-on:click="press">2</button>
-                    <button class="button" v-on:click="press">3</button>
-                    <button class="button" v-on:click="press">-</button>
-                    <button class="button" v-on:click="press">x^2</button>
-                    <button class="button" v-on:click="press">+/-</button>
-                    <button class="button" v-on:click="press">0</button>
-                    <button class="button" v-on:click="press">.</button>
-                    <button class="button" v-on:click="press">%</button>
-                    <button class="button" v-on:click="press">+</button>
-                    <button class="button equal-sign" v-on:click="press">=</button>
-                </div>
+        </button>
+        <div class="results">
+          <input class="input" v-model="current">
+        </div>
+        <div class="basic-mode" v-show="changeMode">
+          <button class="button" v-on:click="press">7</button>
+          <button class="button" v-on:click="press">8</button>
+          <button class="button" v-on:click="press">9</button>
+          <button class="button" v-on:click="press">*</button>
+          <button class="button" v-on:click="press">back</button>
+          <button class="button" v-on:click="press">C</button>
+          <button class="button" v-on:click="press">4</button>
+          <button class="button" v-on:click="press">5</button>
+          <button class="button" v-on:click="press">6</button>
+          <button class="button" v-on:click="press">/</button>
+          <button class="button" v-on:click="press">(</button>
+          <button class="button" v-on:click="press">)</button>
+          <button class="button" v-on:click="press">1</button>
+          <button class="button" v-on:click="press">2</button>
+          <button class="button" v-on:click="press">3</button>
+          <button class="button" v-on:click="press">-</button>
+          <button class="button" v-on:click="press">x^2</button>
+          <button class="button" v-on:click="press">+/-</button>
+          <button class="button" v-on:click="press">0</button>
+          <button class="button" v-on:click="press">.</button>
+          <button class="button" v-on:click="press">%</button>
+          <button class="button" v-on:click="press">+</button>
+          <button class="button equal-sign" v-on:click="press">=</button>
+        </div>
 
-                <div class="complex-mode" v-show="!changeMode">
-                    <button class="button"v-on:click="press">sin</button>
-                    <button class="button"v-on:click="press">cos</button>
-                    <button class="button"v-on:click="press">tan</button>
-                    <button class="button"v-on:click="press">x^</button>
-                    <button class="button"v-on:click="press">back</button>
-                    <button class="button"v-on:click="press">C</button>
-                    <button class="button"v-on:click="press">log</button>
-                    <button class="button"v-on:click="press">ln</button>
-                    <button class="button"v-on:click="press">e</button>
-                    <button class="button"v-on:click="press">deg</button>
-                    <button class="button"v-on:click="press">rad</button>
-                    <button class="button"v-on:click="press">sqrt</button>
-                    <button class="button"v-on:click="press">7</button>
-                    <button class="button"v-on:click="press">8</button>
-                    <button class="button"v-on:click="press">9</button>
-                    <button class="button"v-on:click="press">/</button>
-                    <button class="button"v-on:click="press">x^2</button>
-                    <button class="button"v-on:click="press">x !</button>
-                    <button class="button"v-on:click="press">4</button>
-                    <button class="button"v-on:click="press">5</button>
-                    <button class="button"v-on:click="press">6</button>
-                    <button class="button"v-on:click="press">*</button>
-                    <button class="button"v-on:click="press">(</button>
-                    <button class="button"v-on:click="press">)</button>
-                    <button class="button"v-on:click="press">1</button>
-                    <button class="button"v-on:click="press">2</button>
-                    <button class="button"v-on:click="press">3</button>
-                    <button class="button"v-on:click="press">-</button>
-                    <button class="button"v-on:click="press">%</button>
-                    <button class="button"v-on:click="press">+/-</button>
-                    <button class="button"v-on:click="press">0</button>
-                    <button class="button"v-on:click="press">.</button>
-                    <button class="button"v-on:click="press">pi</button>
-                    <button class="button"v-on:click="press">+</button>
-                    <button class="button equal-sign">=</button>
-                </div>
-            </div>
+        <div class="complex-mode" v-show="!changeMode">
+          <button class="button" v-on:click="press">sin</button>
+          <button class="button" v-on:click="press">cos</button>
+          <button class="button" v-on:click="press">tan</button>
+          <button class="button" v-on:click="press">x^</button>
+          <button class="button" v-on:click="press">back</button>
+          <button class="button" v-on:click="press">C</button>
+          <button class="button" v-on:click="press">log</button>
+          <button class="button" v-on:click="press">ln</button>
+          <button class="button" v-on:click="press">e</button>
+          <button class="button" v-on:click="press">deg</button>
+          <button class="button" v-on:click="press">rad</button>
+          <button class="button" v-on:click="press">sqrt</button>
+          <button class="button" v-on:click="press">7</button>
+          <button class="button" v-on:click="press">8</button>
+          <button class="button" v-on:click="press">9</button>
+          <button class="button" v-on:click="press">/</button>
+          <button class="button" v-on:click="press">x^2</button>
+          <button class="button" v-on:click="press">x !</button>
+          <button class="button" v-on:click="press">4</button>
+          <button class="button" v-on:click="press">5</button>
+          <button class="button" v-on:click="press">6</button>
+          <button class="button" v-on:click="press">*</button>
+          <button class="button" v-on:click="press">(</button>
+          <button class="button" v-on:click="press">)</button>
+          <button class="button" v-on:click="press">1</button>
+          <button class="button" v-on:click="press">2</button>
+          <button class="button" v-on:click="press">3</button>
+          <button class="button" v-on:click="press">-</button>
+          <button class="button" v-on:click="press">%</button>
+          <button class="button" v-on:click="press">+/-</button>
+          <button class="button" v-on:click="press">0</button>
+          <button class="button" v-on:click="press">.</button>
+          <button class="button" v-on:click="press">pi</button>
+          <button class="button" v-on:click="press">+</button>
+          <button class="button equal-sign" v-on:click="press">=</button>
         </div>
-        </div>
-        <script src="https://unpkg.com/vue"></script>
-        <script src="vue-calculator.js"></script>
-        <script src="/script.js"></script>
-    </body>
+      </div>
+    </div>
+  </div>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="vue-calculator.js"></script>
+  <script src="/script.js"></script>
+</body>
+
+<footer>
+  <p>Created by Devin Johnson and Kimberly Garrison: <a href="https://github.com/devinjohnson7/CreativeProject3">
+      GitHub Repository Link: </a></p>
+</footer>
+
 </html>
